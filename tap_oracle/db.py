@@ -13,7 +13,7 @@ def make_dsn(config):
         return oracledb.makedsn(host=config["host"], port=config["port"], sid=config.get("sid"))
 
 def open_connection(config):
-    LOGGER.info("dsn: %s", make_dsn(config))
+    LOGGER.info("lee.dsn: %s", make_dsn(config))
     conn_config = {
         'user': config["user"],
         'password': config["password"],
