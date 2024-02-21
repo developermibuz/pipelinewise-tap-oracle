@@ -11,7 +11,7 @@ setup(name='pipelinewise-tap-oracle',
       long_description=long_description,
       long_description_content_type='text/markdown',
       author='Stitch',
-      url='https://github.com/transferwise/pipelinewise-tap-oracle',
+      url='https://github.com/developermibuz/pipelinewise-tap-oracle',
       classifiers=[
           'License :: OSI Approved :: GNU Affero General Public License v3',
           'Programming Language :: Python :: 3 :: Only'

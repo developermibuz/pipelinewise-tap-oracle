@@ -85,7 +85,9 @@ def OutputTypeHandler(cursor, name, defaultType, size, precision, scale):
 def prepare_columns_sql(stream, c):
    column_name = """ "{}" """.format(c)
    if 'string' in stream.schema.properties[c].type and stream.schema.properties[c].format == 'date-time':
-      return "to_char({})".format(column_name)
+      # return "to_char({})".format(column_name)
+      column_name_f = """ nvl({}, to_date('01.01.2099', 'dd.mm.yyyy')) """.format(column_name)
+      return "to_char({})".format(column_name_f)
    return column_name
 
 def prepare_where_clause_arg(val, sql_datatype):
